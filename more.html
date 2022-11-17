@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more event</title>
+</head>
+
+<body>
+    <h1>more event</h1>
+    <h3 id="info">very important option </h3>
+    <input id="delete-con" type="text" placeholder="type delete">
+    <button id="delete-btn" disabled>DELETE</button>
+    <script>
+
+
+
+        document.getElementById('delete-con').addEventListener('focus', function () {
+            //    console.log('hello world')
+            document.body.style.backgroundColor = 'red';
+        })
+
+
+        document.getElementById('delete-con').addEventListener('blur', function () {
+            //    console.log('hello world')
+            document.body.style.backgroundColor = 'green';
+        });
+
+        document.getElementById('delete-con').addEventListener('keydown', function () {
+            // console.log('hello world');
+            const data = document.getElementById('delete-btn');
+            console.log(data.value);
+
+        });
+
+        document.getElementById('delete-con').addEventListener('keypress', function () {
+            // console.log('hello world');
+            const data = document.getElementById('delete-con');
+            console.log(data.value);
+
+        });
+
+
+        document.getElementById('delete-con').addEventListener('keyup', function () {
+            // console.log('hello world');
+            const data = document.getElementById('delete-con');
+            console.log(data.value);
+
+        });
+
+
+        document.getElementById('delete-btn').addEventListener('click', function () {
+            document.getElementById('info').style.display = 'none';
+            document.getElementById
+        })
+
+        document.getElementById('delete-con').addEventListener('keyup', function (event) {
+            console.log('hello world');
+            const data = document.getElementById('delete-con');
+            console.log(data.value);
+            console.log(event.target.value);
+            console.log(event);
+            const ok = document.getElementById('delete-btn');
+            if (event.target.value == 'delete') {
+                ok.removeAttribute('disabled');
+            } else {
+                ok.setAttribute('disabled' , true);
+            }
+
+        });
+
+        
+        document.getElementById('delete-con').addEventListener('change', function () {
+            // console.log('hello world');
+            const data = document.getElementById('delete-con');
+            console.log(data.value);
+
+        });
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

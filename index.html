@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>dom class</title>
+</head>
+<body>
+    <div class="newarea">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, hic dolore ipsa vero laborum illum porro voluptatem nesciunt placeat neque.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, hic dolore ipsa vero laborum illum porro voluptatem nesciunt placeat neque.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, hic dolore ipsa vero laborum illum porro voluptatem nesciunt placeat neque.</p>
+    </div>
+    
+
+
+    <textarea name="" id="comment" cols="30" rows="10"></textarea>
+    <button id="submit"> post </button>
+
+
+    <h1 id="js">zibair </h1>
+    <h1 id="jsOne">zibair </h1>
+
+    <h1 onclick="alert('amir')">on click 1 </h1>
+
+    <h1 onclick="console.log('hello world')">on click 2 </h1>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, delectus!</p>
+
+    <button onclick=" document.body.style.backgroundColor = 'blue' " >click me backgroundColor</button>
+
+    <button onclick="makeIt()">this is function button </button>
+
+    <script src="./js/1st.js"></script>
+
+
+
+
+    <script>
+
+        function makeIt() {
+            document.body.style.color = "black";
+            document.body.style.backgroundColor = 'yellow';
+        }
+
+        console.log()
+        console.log('amir bhai');
+        for (let i = 0; i < 5; i++) {
+           
+            console.log(i);
+        }
+
+        let student = {
+            name: 'amir',
+            age: 22
+        }
+        let data = document.getElementsByTagName('h1');
+        for(h1 of data){
+            console.log(h1);
+        }
+
+        let color = document.getElementById('js');
+        color.style.backgroundColor = "green";
+        let text = document.getElementById('jsOne');
+        text.style.textAlign ='center';
+        console.log(alert('user name'));
+        console.log(data);
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!             
+
+        let color = document.getElementById('js');
+        color.onclick = makeIt(); //() hobena
+        function makeIt() {
+            document.body.style.backgroundColor = 'yellow';
+        }
+
+        color.onclick = function ( ) { anonemas fun 
+            
+        }
+
+        color.addEventListener('click' , makeIt)
+        function makeIt() {
+            document.body.style.color = "black";
+            document.body.style.backgroundColor = 'yellow';
+        }
+
+        color.addEventListener('click' ,function name(params) {
+            document.body.style.backgroundColor = 'yellow';
+        })
+
+        document.getElementById('js').addEventListener('click' , function () {
+            // document.body.style.backgroundColor = 'yellow';
+        })
+
+
+    document.getElementById('submit').addEventListener('click' ,function(){
+    // console.log('bhai aso tumi ');
+    const commentBox = document.getElementById('comment');
+    // console.log(commentBox.value);
+
+    const newp = document.createElement('p');
+    newp.innerText = commentBox.value;
+
+    const com = document.getElementById('newarea').node.appendChild(newp);
+    // com.appendChild(newp);
+
+})
+
+
+
+    </script>
+
+    
+
+
+</body>
+</html> 
